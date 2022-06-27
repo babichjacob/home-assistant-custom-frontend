@@ -1,0 +1,16 @@
+{
+  "name": "@babichjacob/home-assistant-custom-frontend-workspace-root",
+  "private": true,
+  "version": "2022.6.2-6.0",
+  "description": "My custom frontend for Home Assistant",
+  "author": "J / Jacob Babich <jacobbabichpublic+git@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/babichjacob/home-assistant-custom-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/babichjacob/home-assistant-custom-frontend/issues"
+  },
+  "homepage": "https://github.com/babichjacob/home-assistant-custom-frontend"
+}

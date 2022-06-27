@@ -1,0 +1,24 @@
+{
+  "name": "@babichjacob/home-assistant-custom-frontend",
+  "private": true,
+  "version": "2022.6.2-6.0",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "package": "vite build",
+    "prepare": "svelte-kit sync"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.49",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "postcss-load-config": "^4.0.1",
+    "svelte": "^3.48.0",
+    "svelte-preprocess": "^4.10.7",
+    "svelte2tsx": "^0.5.11",
+    "tailwindcss": "^3.1.4",
+    "vite": "^2.9.12"
+  },
+  "type": "module"
+}
