@@ -1,4 +1,4 @@
-import { sveltekit } from "@sveltejs/kit/experimental/vite";
+import { sveltekit } from "@sveltejs/kit/vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { dirname, resolve } from "path";
 import { fileURLToPath } from "url";
@@ -9,33 +9,35 @@ const entry = resolve(
   "src/lib/all-custom-elements.js"
 );
 
-const mode = process.env.NODE_ENV;
-const dev = mode === "development";
+export default defineConfig(({ mode }) => {
+  // const mode = process.env.NODE_ENV;
+  const dev = mode === "development";
 
-export default defineConfig({
-  ...(dev
-    ? {}
-    : {
-        build: {
-          lib: {
-            entry,
-            name: "AllCustomElements",
-            fileName: () => "all-custom-elements.js",
-            formats: ["es"],
+  return {
+    ...(dev
+      ? {}
+      : {
+          build: {
+            lib: {
+              entry,
+              name: "AllCustomElements",
+              fileName: () => "all-custom-elements.js",
+              formats: ["es"],
+            },
+            minify: false,
           },
-          minify: false,
-        },
-      }),
+        }),
 
-  plugins: [dev ? sveltekit() : svelte()],
+    plugins: [dev ? sveltekit() : svelte()],
 
-  ...(dev
-    ? {}
-    : {
-        resolve: {
-          alias: {
-            $lib: resolve("./src/lib"),
+    ...(dev
+      ? {}
+      : {
+          resolve: {
+            alias: {
+              $lib: resolve("./src/lib"),
+            },
           },
-        },
-      }),
+        }),
+  };
 });

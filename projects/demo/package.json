@@ -3,7 +3,7 @@
   "private": true,
   "version": "2022.6.2-6.0",
   "scripts": {
-    "dev": "svelte-kit dev",
+    "dev": "vite dev",
     "package": "vite build",
     "prepare": "svelte-kit sync"
   },
